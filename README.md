@@ -1,8 +1,6 @@
-# Predict Bike Sharing Demand with AutoGluon
+# AWS Machine Learning Engineer Nanodegree - Machine Learning Foundamentals
 
-## AWS Machine Learning Engineer Nanodegree
-
-## Overview
+## Project 1Overview
 In this project, students will apply the knowledge and methods they learned in the Introduction to Machine Learning course to compete in a Kaggle competition using the AutoGluon library.
 
 Students will create a Kaggle account if they do not already have one, download the Bike Sharing Demand dataset, and train a model using AutoGluon. They will then submit their initial results for a ranking.
