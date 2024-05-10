@@ -14,7 +14,7 @@ Exploratory data analysis provided insights into overall trends and key features
 
 Insights:
 
-<img src="/img/date_analysis.png" alt="date_analysis.png" width="500"/>
+![/img/date_analysis.png](img/date_analysis.png)
 
 1. Average Bike Rentals per Month:
     - The trend shows higher bike rentals during the warmer months (May through October) and lower rentals during colder months (November through April), consistent across both years. This indicates a clear seasonal pattern that can be crucial for planning and forecasting.
@@ -22,7 +22,7 @@ Insights:
 2. Average Bike Rentals by Hour of the Day:
     - There are peak rental times at around 8 AM and 5 PM, corresponding to typical commuting hours. The low rental activity in the early morning hours indicates minimal usage during late-night hours.
 
-<img src="/img/categories_analysis.png" alt="categories_analysis.png" width="500"/>
+![/img/categories_analysis.png](img/categories_analysis.png)
 
 3. Average Bike Rentals by Day of the Week:
     - Bike rentals are generally higher on weekdays compared to weekends. This pattern may be due to the use of bikes for commuting during workdays.
@@ -30,12 +30,12 @@ Insights:
 4. Weather Distribution:
     - Most of the data is recorded during clear weather (Weather 1). The frequency decreases with worsening weather conditions, with very few data points recorded during heavy rain/snow (Weather 4).
 
-<img src="/img/outlier_detection.png" alt="outlier_detection.png" width="500"/>  
-<img src="/img/windspeed_outlier_analysis.png" alt="windspeed_outlier_analysis.png" width="500"/>  
+![/img/outlier_detection.png](img/outlier_detection.png)
+![/img/windspeed_outlier_analysis.png](img/windspeed_outlier_analysis.png)  
 
 5. There are 1 outlier and 227 outliers found in humidity and windspeed observations. Investigating outliers across time, indicating that they are not isolated to specific periods but rather scattered across different dates. 
 
-<img src="/img/correlation_analysis.png" alt="correlation_analysis.png" width="500"/> 
+![/img/correlation_analysis.png](img/correlation_analysis.png) 
 
 6. There are two pairs of high correlation features: `season`-`month` and `temp`-`atemp`, which are aligning with common sense.
 
@@ -46,7 +46,7 @@ After Exploratory Data Anlaysis (EDA), I have:
 - **Create Dummy Data**: Convert categorical data into dummy columns that returns 47 columns in total features.
 
 ### How much better did your model perform after adding additional features and why do you think that is?
-The model's performance improved significantly, almost halving the error. This improvement is attributed to the additional granular features like (`year`, `month`, `hour`), which allowed the model to better capture peak and off-peak demand times, aligning with commuting patterns.
+The model's performance improved significantly with 73.62% improvement in Root Mean Squred Logarithmic Error (RMSLE). This improvement is attributed to the additional granular features like (`year`, `month`, `hour`), which allowed the model to better capture peak and off-peak demand times, aligning with commuting patterns.
 
 ## Hyper parameter tuning
 ### How much better did your model perform after trying different hyper parameters?
@@ -56,11 +56,11 @@ Despite forcusing on tuning the top-performing models, the hyperparameter-tuned 
 If given more time, I would focus on experimenting more extensive tuning with a broader range of hyperparameters and model ensembling techniques (like stacking and bagging) to better understand how these affect model performance.
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
-|model|Number of Training Data Points|Number of Features|Number of Bag Folds|CatBoost(CAT)|LightGBM(GBM)|
-|--|--|--|--|--|--|
-|initial|10886||10|8|auto|auto|
-|add_features|10638|47|8|auto|auto|
-|hpo|10638|47|12|customized|customized|
+|model|Number of Training Data Points|Number of Features|Number of Bag Folds|CatBoost(CAT)|LightGBM(GBM)|Score|
+|--|--|--|--|--|--|--|
+|initial|10886||10|8|auto|auto|1.7813|
+|add_features|10638|47|8|auto|auto|0.4766|
+|hpo|10638|47|12|customized|customized|0.4994|
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
