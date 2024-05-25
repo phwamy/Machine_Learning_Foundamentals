@@ -1,4 +1,4 @@
-# AWS Machine Learning Engineer Nanodegree - Machine Learning Foundamentals
+# AWS-Udacity Machine Learning Engineer Nanodegree - Machine Learning Foundamentals
 
 Here are projects for AWS-Udacity Machine Learning Engineer Nanodegree - Machine Learning Foundamentals. 
 
